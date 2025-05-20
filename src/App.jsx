@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import PersonalInfo from './components/PersonalInfo'
 import Employment from './components/Employment'
+import Education from './components/Education';
 import CVTemplate from './components/CVTemplate'
 
 function App() {
@@ -25,6 +26,15 @@ function App() {
       endDate: 'Present',
       city: 'Colorado',
       jobDescription: 'Developed responsive apps using React, Tailwind, and APIs.'
+    }],
+    studyHistory: [{
+      id: uuidv4(),
+      schoolName: 'UC Berkeley',
+      degree: 'B.Sc. in Computer Science',
+      startDate: '2017',
+      endDate: '2021',
+      city: 'Berkeley',
+      schoolDescription: 'Studied algorithms, data structures, and full-stack web dev.'
     }]
   })
 
@@ -36,6 +46,8 @@ function App() {
         <PersonalInfo person = {person} updatePerson = {setPerson}/>
         
         <Employment person = {person} updatePerson = {setPerson}/>
+
+        <Education person = {person} updatePerson = {setPerson}/>
       </div>
       <div className='rightContainer'>
         <CVTemplate person={person}/>

@@ -29,7 +29,7 @@ function Employment({person,updatePerson}){
 
     const removeEmployment = (id) => {
         const updatedEmploymentHistory = person.employmentHistory.filter((job) => {
-            job.id !== id;
+            return job.id !== id;
         });
         updatePerson({...person, employmentHistory: updatedEmploymentHistory});
     }

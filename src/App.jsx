@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react'
 import './App.css'
 import PersonalInfo from './components/PersonalInfo'
+import Employment from './components/Employment'
 import CVTemplate from './components/CVTemplate'
 
 function App() {
@@ -14,15 +16,26 @@ function App() {
     linkedIn: 'linkedin.com/in/johndoe',
     portfolio: 'https://johndou.github.io/Portfolio/',
     aboutMe: 'Creative developer who loves building elegant UIs',
-    avatar: false
+    avatar: false,
+    employmentHistory: [{
+      id: uuidv4(),
+      jobTitle: 'Frontend Developer',
+      employer: 'TechCorp',
+      startDate: '2021',
+      endDate: 'Present',
+      city: 'Colorado',
+      jobDescription: 'Developed responsive apps using React, Tailwind, and APIs.'
+    }]
   })
 
   return (
     <>
       <div className='leftContainer'>
         <h1>Resume Builder</h1>
-        <h2>Personal Info</h2>
+       
         <PersonalInfo person = {person} updatePerson = {setPerson}/>
+        
+        <Employment person = {person} updatePerson = {setPerson}/>
       </div>
       <div className='rightContainer'>
         <CVTemplate person={person}/>

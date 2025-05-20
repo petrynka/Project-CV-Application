@@ -14,6 +14,8 @@ function PersonalInfo({person, updatePerson}){
 
     return(
         <>
+            <h2>Personal Info</h2>
+
             <form action="" className='personalInfoForm'>
                 <div className="InputRow">
                     <div className="inputItem">

@@ -5,7 +5,7 @@ function Employment({person,updatePerson}){
     
     const handleChange = (id, field, value) => {
         const updatedEmploymentHistory = person.employmentHistory.map((job) =>{
-            job.id === id ? {...job, [field] : value} : job;
+            return job.id === id ? {...job, [field] : value} : job;
         }); 
 
         updatePerson({...person, employmentHistory: updatedEmploymentHistory});

@@ -4,7 +4,7 @@ import '../styles/Education.css';
 function Education({person,updatePerson}){
     const handleChange = (id, field, value) => {
         const updatedEducationHistory = person.studyHistory.map((school) =>{
-            school.id === id ? {...school, [field] : value} : school;
+            return school.id === id ? {...school, [field] : value} : school;
         }); 
 
         updatePerson({...person, employmentHistory: updatedEducationHistory});

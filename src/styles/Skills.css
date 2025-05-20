@@ -1,0 +1,54 @@
+h2{
+  max-width: 50%;
+  margin: 35px auto;
+  font-size: 28px;
+  text-align: center;
+  color: black;
+  margin-top: 35px;
+}
+
+.SkillForm{
+    width: 90%;
+    background-color: rgb(250, 250, 255);
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    margin-top: 30px;
+}
+
+.buttonDiv{
+    width: 90%;
+    margin: 30px auto;
+}
+
+label{
+    display: block;
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+input{
+    width: 95%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    margin-bottom: 20px;
+}
+
+button{
+  background-color: #007B9E;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  font-size: 18px;
+}
+
+button:hover{
+  background-color: #005f7e;
+}

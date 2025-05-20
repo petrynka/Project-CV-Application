@@ -3,7 +3,8 @@ import { useState } from 'react'
 import './App.css'
 import PersonalInfo from './components/PersonalInfo'
 import Employment from './components/Employment'
-import Education from './components/Education';
+import Education from './components/Education'
+import Skills from './components/Skills';
 import CVTemplate from './components/CVTemplate'
 
 function App() {
@@ -35,7 +36,13 @@ function App() {
       endDate: '2021',
       city: 'Berkeley',
       schoolDescription: 'Studied algorithms, data structures, and full-stack web dev.'
-    }]
+    }],
+    skills: [
+      {id: uuidv4(),name:'JavaScript'},
+      {id: uuidv4(),name:'HTML/CSS'},
+      {id: uuidv4(),name:'React'},
+      {id: uuidv4(),name:'Git'}
+    ]
   })
 
   return (
@@ -48,6 +55,8 @@ function App() {
         <Employment person = {person} updatePerson = {setPerson}/>
 
         <Education person = {person} updatePerson = {setPerson}/>
+
+        <Skills person = {person} updatePerson = {setPerson}/>
       </div>
       <div className='rightContainer'>
         <CVTemplate person={person}/>

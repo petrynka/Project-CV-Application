@@ -1,13 +1,46 @@
 import '../styles/CVTemplate.css'
+import html2pdf from 'html2pdf.js';
 
 function CVTemplate({person}){
     const fullName = `${person.name} ${person.surName}`;
+
+    const handleDownload = () => {
+        const element = document.getElementById('cv-pdf');
+
+        const opt = {
+            margin:       0,
+            filename:     'Resume.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    }
+
+    const handlePreview = () => {
+        const element = document.getElementById('cv-pdf');
+
+        const opt = {
+            margin: 0,
+            filename: 'Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
+            window.open(pdf.output('bloburl'), '_blank');
+        });
+    };
+
     return(
         <>
             <div className="btn-holder">
-                <button>Download PDF</button>
+                <button onClick={handlePreview}>Preview PDF</button>
+                <button onClick={handleDownload}>Download PDF</button>
             </div>
-            <div className="CVTemplate">
+            <div id='cv-pdf' className="CVTemplate">
                 <div className="leftSide">
                     <div className="avatarContainer">
                         {person.avatar ? (

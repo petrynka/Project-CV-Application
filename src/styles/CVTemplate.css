@@ -1,3 +1,20 @@
+.btn-holder{
+  width: 90%;
+  margin: 30px auto;
+}
+
+.CVTemplate{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.leftSide{
+  width: 32%;
+  background-color: rgb(51, 51, 68);
+  color: white;
+}
+
 .cv-container {
   padding: 20px;
   background-color: #f0f0f0;
@@ -5,17 +22,63 @@
   text-align: center;
 }
 
+.avatarContainer{
+  width: 150px;
+  margin: 30px auto;
+}
+
+.textContent{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.textContent h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.occupation{
+  color: #ccc;
+}
+
+.contact{
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.infoElem p:first-child{
+  font-size: 20px;
+  margin-bottom: 5px;
+  overflow-wrap: break-word;
+}
+
+.infoElem p:last-child{
+  font-size: 16px;
+  font-weight: 100;
+  overflow-wrap: break-word;
+  color: #ccc;
+}
+
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
 .placeholder-pic {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   background-color: #ccc;
   border-radius: 50%;
   display: flex;
@@ -24,4 +87,83 @@
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 10px;
+}
+
+
+/* ================ RIGHT SIDE ==================== */
+
+.rightSide{
+  width: 68%;
+}
+
+.rightSide h3{
+  font-size: 48px;
+  margin: 0;
+  text-align: start;
+  
+}
+
+.rightSideContainer{
+  width: 90%;
+  margin: 40px auto 0 auto;
+}
+
+.occupation-right{
+  font-size: 26px;
+  color: #b1aeae;
+}
+
+.right-AboutMe{
+  font-size: 17px;
+  color: black;
+  margin-top: 35px;
+}
+
+.employment{
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #b1aeae;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.EmploymentUnit{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.employment-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.employment-title p:first-child{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.employment-title p:last-child{
+  color: #807c7c;
+}
+
+.cityAndEmployer{
+  color: #807c7c;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.skillHolder{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.Skill{
+  width: 49%;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 100;
 }

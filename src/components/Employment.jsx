@@ -94,10 +94,15 @@ function Employment({person,updatePerson}){
                 <label htmlFor={`jobDescription-${job.id}`}>Description:</label>
                 <textarea 
                     id={`jobDescription-${job.id}`}
+                    placeholder="- Built React UI\n- Connected APIs\n- Wrote tests"
                     value={job.jobDescription}
                     rows="6" 
                     onChange={(e) => handleChange(job.id,'jobDescription',e.target.value)}
                 ></textarea>
+
+                <small style={{ fontSize: '12px', color: '#555', display: 'block', marginBottom: '15px' }}>
+                    Use "-" or new line for each responsibility
+                </small>
 
                 <button type='button' onClick={() => removeEmployment(job.id)}>Remove</button>
                 </div>

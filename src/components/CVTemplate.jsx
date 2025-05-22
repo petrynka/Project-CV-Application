@@ -96,7 +96,15 @@ function CVTemplate({person}){
                                     <p>{job.startDate} - {job.endDate}</p>
                                 </div>
                                 <p className='cityAndEmployer'>{job.city} - {job.employer}</p>
-                                <p>{job.jobDescription}</p>
+                                <ul className="description-list">
+                                    {job.jobDescription
+                                        .split('\n') 
+                                        .map(line => line.replace(/^[-•]\s*/, '')) 
+                                        .filter(line => line.trim() !== '') 
+                                        .map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
 
